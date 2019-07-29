@@ -7,8 +7,8 @@
       http://www.springframework.org/schema/context
       http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <context:component-scan base-package="ru.geekbrains.gorin" />
-    <bean id="camera" class="ru.geekbrains.gorin.Camera">
+    <context:component-scan base-package="ru.geekbrains.harold" />
+    <bean id="camera" class="ru.geekbrains.harold.cameraTask.Camera">
         <property name="cameraRoll">
             <ref bean="cameraRoll" />
         </property>

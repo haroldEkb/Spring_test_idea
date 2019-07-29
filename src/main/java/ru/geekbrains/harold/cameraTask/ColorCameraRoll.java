@@ -1,4 +1,4 @@
-package ru.geekbrains.gorin;
+package ru.geekbrains.harold.cameraTask;
 
 public class ColorCameraRoll implements CameraRoll {
     public void processing() {

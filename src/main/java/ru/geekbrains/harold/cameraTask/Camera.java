@@ -1,4 +1,4 @@
-package ru.geekbrains.gorin;
+package ru.geekbrains.harold.cameraTask;
 
 public class Camera {
     private CameraRoll cameraRoll;
