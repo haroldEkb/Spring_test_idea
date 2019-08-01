@@ -1,16 +1,33 @@
 package ru.geekbrains.harold.rifleTask;
 
-public class Rifle implements Gun {
+import org.springframework.stereotype.Component;
 
-    private Ammo ammo;
+@Component
+public class Rifle{
 
-    @Override
-    public void shoot() {
-        System.out.println("Звук выстрела");
-        ammo.processing();
+    private Magazine magazine;
+
+    public Rifle(){}
+
+
+    public Rifle(Magazine magazine){
+        this.magazine = magazine;
     }
 
-    public void setAmmo(Ammo ammo) {
-        this.ammo = ammo;
+    public Magazine getMagazine() {
+        return magazine;
+    }
+
+    public void setMagazine(Magazine magazine) {
+        this.magazine = magazine;
+    }
+
+    public void shoot(){
+        if (magazine.getCount() > 0){
+            System.out.println("Звук выстрела");
+            magazine.shot();
+        } else {
+            System.out.println("Щёлк");
+        }
     }
 }
